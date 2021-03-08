@@ -7,6 +7,7 @@ import java.util.List;
 
 public class MemoryUserDao implements UserDao{
     private List<User> users;
+    private int pos;
     public MemoryUserDao()
     {
         users=new ArrayList<>();
@@ -18,16 +19,15 @@ public class MemoryUserDao implements UserDao{
                 "omar.filali",
                 "filali",
                 "omarfilali@live.fr"));
+        pos=3;
     }
 
     @Override
     public User addUser(User user) {
         //verification d unicite
-        for(User u:users)
-            if(u.getId()==user.getId())
-                return null;
-
+        user.setId(pos);
         users.add(user);
+        pos++;
         return user;
     }
 

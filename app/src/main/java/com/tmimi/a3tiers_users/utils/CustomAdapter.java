@@ -19,6 +19,7 @@ public class CustomAdapter extends BaseAdapter {
     private LayoutInflater layoutInflater;
     public CustomAdapter(List<String> users, Context c)
     {
+        Log.d("debug_app","adapter construction");
         this.userList=users;
         layoutInflater= LayoutInflater.from(c);
     }
