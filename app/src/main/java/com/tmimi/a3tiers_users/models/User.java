@@ -1,6 +1,10 @@
 package com.tmimi.a3tiers_users.models;
 
-public class User {
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class User extends RealmObject {
+    @PrimaryKey
     private int id;
     private String userName;
     private String name;

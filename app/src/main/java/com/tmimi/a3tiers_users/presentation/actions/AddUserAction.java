@@ -1,5 +1,6 @@
 package com.tmimi.a3tiers_users.presentation.actions;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class AddUserAction implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
+        Log.d("3tiers_app","click");
         String userName=addUserActivity.getUserName().getText().toString();
         String name=addUserActivity.getName().getText().toString();
         String email=addUserActivity.getEmail().getText().toString();
